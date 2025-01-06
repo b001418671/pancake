@@ -1,0 +1,91 @@
+/* Reset Styles */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(145deg, #1d3557, #4a3426); /* Deep Blue with rich tone */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* Landing Container */
+.landing-container {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    padding: 3em 2em;
+    border-radius: 1rem; /* Smooth rounded corners */
+    box-shadow: 0 4em 4em rgba(0, 0, 0, 0.2); /* Elevated shadow for a premium feel */
+    max-width: 80%;
+    width: 35%; /* Slightly narrower for a more professional layout */
+    border: 0.2rem solid #4a3426; /* Border matching the theme */
+}
+
+/* H1 Styling */
+h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+    font-size: 2.5em;
+    color: #4a3426; /* Rich dark chocolate tone */
+    margin-bottom: 0.5em;
+    text-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+}
+
+h1 span {
+    font-size: 0.8em;
+    color: #4a3426; /* Accent gold-like color for 'Welcome to' */
+    display: block; /* Makes the text appear above */
+}
+
+/* Subtitle Styling */
+p {
+    font-size: 1.2em;
+    color: #5c5044; /* Warm gray for readability */
+    margin-bottom: 2em;
+    font-style: italic; /* Adds a touch of elegance */
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, #b08a62,  #f1c40f); /* Luxurious gradient button */
+    color: #ffffff; /* Crisp white text */
+    border: none;
+    padding: 0.8em 2.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 2rem; /* Smooth rounded button */
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0.8em 1.5em rgba(0, 0, 0, 0.2); /* Elevated shadow */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #ffd700, #6c5948); /* Reverse gradient for hover */
+    transform: translateY(-0.2em) scale(1.03); /* Lift and zoom effect */
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-container {
+        width: 90%; /* Adapt width for smaller screens */
+        padding: 2em 1.5em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    button {
+        font-size: 1em;
+    }
+}

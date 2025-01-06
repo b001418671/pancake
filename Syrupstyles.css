@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Deep Gray */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light Gray Gradient */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em; /* Adjusted for em-based spacing */
+    background: linear-gradient(90deg, #1d3557, #457b9d); /* Gradient background */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f1c40f; /* Golden yellow for logo */
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5em; /* Adjusted for em-based spacing */
+}
+
+header nav button {
+    background: #1d3557;
+    color: white;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+header nav button:hover {
+    background: #f1c40f;
+    color: #1d3557;
+    transform: translateY(-0.2em);
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5% 10%; /* Used percentage for padding */
+    gap: 2%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#pancake-image {
+    width: 30%; /* Adjusted width for responsiveness */
+    border-radius: 0.5em;
+    box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    max-width: 50%;
+    color: #2c3e50; /* Deep Gray */
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #1d3557; /* Deep Blue */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.about-text p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #555; /* Soft Gray */
+}
+
+.about-text p strong {
+    color: #f1c40f; /* Golden Yellow */
+}
+
+/* Pancake Cards */
+.pancake-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em; /* Used em for spacing */
+    margin-top: 5%;
+}
+
+.pancake-card {
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjusted for consistency */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pancake-card:hover {
+    transform: translateY(-0.2em);
+    box-shadow: 0 0.6em 1.5em rgba(0, 0, 0, 0.2);
+}
+
+.pancake-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 0.4em solid #f1c40f;
+}
+
+.pancake-card h3 {
+    font-size: 1.2em;
+    margin: 1em 0;
+    color: #1d3557;
+}
+
+.pancake-card p {
+    font-size: 1em;
+    margin: 0 1em 1em;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.8em;
+    margin-top: auto;
+}

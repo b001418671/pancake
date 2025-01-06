@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Deep Gray */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light Gray Gradient */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #1d3557, #457b9d); /* Gradient background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Ensure it stretches across the screen */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f1c40f; /* Golden yellow for logo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav button {
+    background: #1d3557; /* Matches header background */
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header nav button:hover {
+    background: #f1c40f;
+    color: #1d3557;
+    border: 2px solid #f1c40f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Ensures it takes up available space */
+    text-align: center;
+    gap: 1.5em; /* Space between elements */
+    padding: 2em; /* Adds some padding around the content */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+h2 {
+    font-size: 2.2em;
+    margin: 0;
+    line-height: 1.4;
+    word-wrap: break-word; /* Prevents text overflow */
+    max-width: 90%; /* Restricts the width for smaller screens */
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 0;
+    max-width: 90%; /* Restricts width for better readability */
+}
+
+#pancake-image {
+    width: 90%; /* Ensures the image scales for smaller screens */
+    max-width: 500px; /* Limits maximum size of the image */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #1d3557; /* Dark blue background */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 15px 0; /* Adds padding for better spacing */
+    font-size: 0.9em;
+    width: 100%;
+    
+}
+
+footer p {
+    color: white;  /* Ensure the text inside <p> is white */
+    margin: 0;  /* Remove default margins */
+}
+
+/* Responsive Design */
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+    header .logo {
+        font-size: 1.8em;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+        max-width: 95%; /* Adjusts text width */
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    #pancake-image {
+        width: 95%;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #pancake-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    header nav button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        max-width: 95%;
+    }
+
+    p {
+        font-size: 0.9em;
+        max-width: 95%;
+    }
+
+    #pancake-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+

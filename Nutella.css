@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Deep Gray */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light Gray Gradient */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #1d3557, #457b9d); /* Gradient background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f1c40f; /* Golden yellow for logo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav button {
+    background: #1d3557; /* Matches header background */
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header nav button:hover {
+    background: #f1c40f;
+    color: #1d3557;
+    border: 2px solid #f1c40f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5% 18%;
+    gap: 20px; /* Adds space between the image and text */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#pancake-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow */
+    width: 20%;
+}
+
+.about-text {
+    max-width: 90%;
+    color: #2c3e50; /* Deep Gray */
+    text-align: left;
+    line-height: 1.8; /* Adds better readability */
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1d3557; /* Deep Blue */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555; /* Soft Gray */
+}
+
+.about-text p strong {
+    color: #f1c40f; /* Golden Yellow */
+}
+
+/* Footer */
+footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    margin-top: auto;
+}

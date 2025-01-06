@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancakeinator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        function trackSignUpEvent() {
+            gtag('event', 'sign_up', {
+                'event_category': 'Form',
+                'event_label': 'Pancake Sign-Up',
+                'value': 1
+            });
+            alert('Sign-Up Event Tracked'); // For debugging purposes
+        }
+    </script>
+    <!-- Include EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the form from reloading the page
+
+            const form = document.getElementById('form');
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", data) // Replace placeholders with your EmailJS service and template IDs
+                .then(response => {
+                    alert('Subscription successful! Thank you for signing up.');
+                    form.reset(); // Clear form after submission
+                })
+                
+
+            trackSignUpEvent();
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">🥞 Pancakeinator</div>
+        <!-- Hamburger Menu Icon -->
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav>
+            <button data-section="home">Home</button>
+            <button data-section="menu">Our Pancakes</button>
+            <div class="dropdown">
+                <button class="dropdown-button" data-section="">Locations</button>
+                <div class="dropdown-content">
+                    <a href="locationUC.html">Utrecht Central</a>
+                    <a href="locationICU.html">International Campus Utrecht</a>
+                    <a href="sp.html">Science Park</a>
+                </div>
+            </div>
+            <button data-section="about">About Us</button>
+            <button data-section="signup">Sign Up</button>
+            <a href="tutorial.html"><button>Vending Machine</button></a>
+        </nav>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Delicious Pancakes Anytime, Anywhere</h1>
+                <p>Convenient, fresh, and made just for you at our pancake vending machines.</p>
+                <button class="cta-button" data-section="signup">Sign Up</button>
+            </div>
+        </section>
+
+
+        <!-- Menu Section -->
+        <!-- Menu Section -->
+<section id="menu" class="section">
+    <h2 style="font-size: 2.5em; color: #1d3557; margin-bottom: 20px; font-weight: bold; text-align: center;">Our Pancake Creations</h2>
+    <div class="pancake-description" style="background: linear-gradient(135deg, #ffffff, #f3f4f6); padding: 40px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); margin-bottom: 50px; text-align: left; max-width: 900px; margin: 0 auto;">
+        <h3 style="color: #1d3557; font-size: 1.8em; margin-bottom: 20px; font-weight: 600; border-bottom: 2px solid #1d3557; padding-bottom: 10px;">Toppings:</h3>
+        <p style="font-size: 1.3em; color: #555; line-height: 1.8; margin-bottom: 30px;">Powdered sugar, syrup and Nutella.</p>
+
+        <h3 style="color: #1d3557; font-size: 1.8em; margin-bottom: 20px; font-weight: 600; border-bottom: 2px solid #1d3557; padding-bottom: 10px;">Types of Pancakes:</h3>
+        <p style="font-size: 1.3em; color: #555; line-height: 1.8;">Normal classic Dutch pancakes (with or without butter)</p>
+    </div>
+    <div class="pancake-list">
+        <div class="pancake-card">
+            <a href="syruppan.html">
+            <img src="./images/pancake.jpg" alt="Delicious Pancakes">
+            <h3>Syrup Pancakes</h3>
+        </a>
+            <p>Soft and fluffy pancakes, drizzled generously with golden syrup.</p>
+            
+        
+        </div>
+        <div class="pancake-card">
+            <a href="powder.html">
+            <img src="./images/pan1.jfif" alt="Chocolate Chip Pancakes">
+            <h3>Powdered Suger Pancakes</h3>
+        </a>
+            <p>Soft and fluffy pancakes, dusted with a delicate layer of powdered sugar for a classic treat.</p>
+        </div>
+        <div class="pancake-card">
+            <a href="Nutella.html">
+            <img src="./images/pan2.jpg" alt="Berry Bliss Pancakes">
+            <h3>Nutella Pancakes</h3>
+        </a>
+            <p>Soft and fluffy pancakes, generously spread with rich Nutella for a chocolatey indulgence.</p>
+        </div>
+        <div class="pancake-card">
+            <a href="classic.html">
+            <img src="./images/pan 3.jpg" alt="Savory Pancakes">
+            <h3>Classic Dutch Pancake</h3>
+        </a>
+            <p>Traditional Dutch pancakes, perfectly golden and served with your choice of butter or syrup.</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Locations Section -->
+        <section id="locations" class="section">
+            <h2>Find Us Here</h2>
+            <ul class="locations-list">
+                <li>🚉 Utrecht central <br> 
+                    <span class="small-text">Stationsplein 11, 3511 Utrecht</span></li>
+                <li>🏫 International Campus Utrecht - Spinoza and Adam Smith <br>
+                    <span class="small-text">Campusplein 1, 3584 ED Utrecht</span> </li>
+                <li>🌳 Science Park: University library Utrecht, educatorium </li>
+            </ul>
+            <div class="map-container">
+                <img src="./images/map.gif" alt="Map showing our locations">
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>
+                At <strong>Pancakeinator</strong>, we’re redefining how busy individuals enjoy a quick, delicious meal. 
+                Whether you're hurrying to class, catching a train, or simply craving something delightful, 
+                our state-of-the-art vending machines serve freshly made-to-order pancakes in just minutes.
+            </p>
+            <p>
+                Inspired by a love for pancakes and a passion for bringing joy to everyday moments, 
+                we’ve combined convenience with comfort. Each pancake is crafted with care, 
+                offering a warm and satisfying experience designed to fit seamlessly into your day. 
+            </p>
+
+            <h3>Contact US</h3>
+            <p>
+                pancakepancake177@gmail.com
+
+            </p>
+
+          <!-- <a href="tutorial.html">
+                
+                <p> <strong>Click to watch toturial </strong></p>  
+        </a> -->
+    
+        </section>
+
+        <!-- Sign-Up Section -->
+        <section id="signup" class="section">
+            <div class="signup-container">
+                <!-- Left Section -->
+                    <div class="signup-text">
+                        <h1>Follow the latest trends</h1>
+                        <p>Subscribe to our newsletter to get a 50% discount code on your first order.</p>
+                    </div>
+               
+
+                <!-- Right Section -->
+                <div class="signup-right">
+                    <h2>Subscribe to our newsletter</h2>
+                    <form id="form" onsubmit="sendEmail(event)">
+                        <label for="firstName">Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your name" required>
+                    
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                    
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120" required>
+                    
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+                    
+                        <button type="submit" id="button" onclick="trackSignUpEvent()">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Pancakes on the Go | Made with ❤️ for pancake lovers</p>
+    </footer>
+
+    <!-- Include EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
